@@ -77,13 +77,19 @@
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function (response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('status').innerHTML =
+            'Thanks for logging in, ' + response.name + '!';
+      });
   }
+    function testAPI2() {
+        FB.api('/me/friends', function (response) {
+            document.getElementById('status2').innerHTML = 'Friends : ' + response.summary.total_count;
+        });
+    }
+  
     </script>
 
     <!--
@@ -97,6 +103,7 @@
 
     <div id="status">
     </div>
+    <div id="status2"></div>
 
 </body>
 </html>
