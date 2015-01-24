@@ -84,11 +84,26 @@
             'Thanks for logging in, ' + response.name + '!';
       });
   }
-    function testAPI2() {
-        FB.api('/me/friends', function (response) {
-            document.getElementById('status2').innerHTML = 'Friends : ' + response.summary.total_count;
-        });
-    }
+  function test2(token)
+  {
+      FB.api('/me/friends?access_token=' + token, function (response)
+      {
+          if (response.data != null)
+          {
+              var s = 'Got ' + response.data.length + ' friends of total ' + response.summary.total_count;
+              if (response.paging != null && response.paging.next != null)
+                  s += ', doing another..';
+              else
+                  s += ', and that was it!';
+              alert(s);              
+          }
+          else
+          {
+              alert('Got no response');
+          }
+          
+      });
+  }
   
     </script>
 
