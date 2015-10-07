@@ -1,0 +1,53 @@
+<!-- Replace your-device-ID-goes-here with your actual device ID
+and replace your-access-token-goes-here with your actual access token-->
+<!DOCTYPE>
+<html>
+<head>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/sparkjs/0.5.9/spark.min.js">
+</script>
+</head>
+  <body>
+<div id="spark-login" />
+<script>
+    var token = 'a70ed372617e76ac66db33e77ff16f3e10dba546';
+    spark.on('login', function() {
+        
+	console.log("Logged in");
+var devicesPr = spark.listDevices();
+devicesPr.then(
+  function(devices){
+    console.log('Devices: ', devices);
+var device = devices[0];
+//device.callFunction('led','on', function(err, data) {
+//  if (err) {
+//    console.log('An error occurred:', err);
+//  } else {
+//    console.log('Function called succesfully:', data);
+//  }
+//});
+  },
+  function(err) {
+    console.log('List devices call failed: ', err);
+  }
+);
+//var device = devicesPr[0];
+
+    });
+    // Login as usual
+    //spark.login({ username: 'email@example.com', password: 'password'});
+    spark.login({ accessToken: token });
+</script>
+  <center>
+  <br>
+  <br>
+  <br>
+  <form action="https://api.particle.io/v1/devices/53ff6f066667574831362067/write?access_token=a70ed372617e76ac66db33e77ff16f3e10dba546" method="POST">
+    Tell your device what to do!<br>
+    <br>
+    Text to display: <input type="text" name="args">
+    <br>    
+    <input type="submit" value="Do it!">
+  </form>
+  </center>
+  </body>
+</html>
