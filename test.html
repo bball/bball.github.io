@@ -30,12 +30,32 @@ var device = devices[0];
     console.log('List devices call failed: ', err);
   }
 );
-//var device = devicesPr[0];
-
     });
     // Login as usual
     //spark.login({ username: 'email@example.com', password: 'password'});
     spark.login({ accessToken: token });
+
+function inYoFace() {
+	var link = 'http://singaporeseen.stomp.com.sg/singaporeseen/';
+    console.log('GetHeadlines for ' + link);
+    var req = new XMLHttpRequest({mozSystem: true});
+    var cnt = 0;
+    var subcontent = '';
+    req.open('GET',link);
+    req.setRequestHeader('User-agent','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0');
+    req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    req.onreadystatechange=function(){
+        if (req.readyState == 4 && req.status == 200)
+        {
+            console.log('Got data');
+        }
+    };
+    req.send();
+}
+
+
+//window.addEventListener('load', inYoFace, true);
+window.setTimeout(inYoFace,1000,false);
 </script>
   <center>
   <br>
