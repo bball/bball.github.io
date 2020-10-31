@@ -1,124 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Facebook Login JavaScript Example</title>
+    <title>Spacious bright room for rent at Robertson Quay</title>
     <meta charset="UTF-8">
 </head>
 <body>
-    <script>
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
+	<p>Room for rent in an extremely spacious 2200 sqft 4 bedroom condo at UE Square Residences. Ideally situated at the edge of Robertson Quay next to Fort Canning Park, the river, and Blue Line Fort Canning Station with 7 minute MRT to CBD, or 15 minute walk/bike ride to CBD along the river.<br><br>
 
-  // This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+We are a family, married couple with an 8 month old son and a helper. Grandmother stays in the guestroom for 5 nights a week too, but is working during daytime (and helps take care of the baby when she is here in the evening).<br><br>
 
-  window.fbAsyncInit = function() {
-  FB.init({
-      appId: '772478116177979',
-    cookie     : true,  // enable cookies to allow the server to access
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.2' // use version 2.2
-  });
+The room is the corner junior master all the way down the hall at the end of the house (thus it is quiet from the common living room). Floor to ceiling windows at treetop level (4th floor) brings a lot of light in and nice greenery. Double glazed windows means very little sound from outside. The bedroom includes your own ensuite bathroom with shower. Also includes large closets, a queen size bed with nice mattress, desk, chest of drawers, and still quite a lot of space in the room to spare.<br><br>
 
-  // Now that we've initialized the JavaScript SDK, we call
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
+The house common areas include a piano room near the kitchen, the kitchen (including new large refrigerator, new oven, new stove), a new washing machine, two balconies facing fraser place with trees all around and a quiet street, a living room with a cosy seating area, a dining area surrounded by bright windows, and a library area with a nice chair and lamp for relaxing and reading.<br><br>
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+Price is $2000/month negotiable. This includes fiber internet, electricity, water, general cleaning of common areas (because of our helper).<br><br>
 
-  };
+The condo has a tennis court, two squash courts, large and deep swimming pool, and game room.<br><br>
 
-  // Load the SDK asynchronously
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
-      console.log('Welcome!  Fetching your information.... ');
-      FB.api('/me', function (response) {
-          console.log('Successful login for: ' + response.name);
-          document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!';
-      });
-  }
-  function test2(token)
-  {
-      FB.api('/me/friends?access_token=' + token, function (response)
-      {
-          if (response.data != null)
-          {
-              var s = 'Got ' + response.data.length + ' friends of total ' + response.summary.total_count;
-              if (response.paging != null && response.paging.next != null)
-                  s += ', doing another..';
-              else
-                  s += ', and that was it!';
-              alert(s);              
-          }
-          else
-          {
-              alert('Got no response');
-          }
-          
-      });
-  }
-  
-    </script>
-
-    <!--
-      Below we include the Login Button social plugin. This button uses
-      the JavaScript SDK to present a graphical Login button that triggers
-      the FB.login() function when clicked.
-    -->
-
-    <fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();">
-    </fb:login-button>
-
-    <div id="status">
-    </div>
-    <div id="status2"></div>
-
+Ideal tenant would be a single female that is ok living with a family with a baby soon to be toddler.<br><br><p>Contact Ben at whatsapp +65.9180.4127 or email ben.t.ball@gmail.com</p></p>
+<br>
+<p>The room:</p><br>
+<img src="IMG_6188.jpg"><br>
+<img src="IMG_6180.jpg"><br>
+<img src="IMG_6181.jpg"><br>
+<p>Your private ensuite bathroom:</p><br>
+<img src="IMG_6190.jpg"><br>
+<img src="IMG_6191.jpg"><br>
+<p>Living and Dining and Library:</p><br>
+<img src="IMG_6166.jpg"><br>
+<img src="IMG_6167.jpg"><br>
+<img src="IMG_6168.jpg"><br>
+<img src="IMG_6169.jpg"><br>
+<img src="IMG_6170.jpg"><br>
+<img src="IMG_6177.jpg"><br>
+<img src="IMG_6192.jpg"><br>
+<p>You are at the end of the long hallway quiet and secluded away from common area:</p><br>
+<img src="IMG_6178.jpg"><br>
+<p>Piano room:</p><br>
+<img src="IMG_6198.jpg"><br>
+<p>Kitchen and two balconies:</p><br>
+<img src="IMG_6173.jpg"><br>
+<img src="IMG_6174.jpg"><br>
+<img src="IMG_6197.jpg"><br>
+<p>Contact Ben at whatsapp +65.9180.4127 or email ben.t.ball@gmail.com</p>
 </body>
-</html>
